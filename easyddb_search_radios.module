@@ -4,4 +4,46 @@
  *  Extend search form with destination choose buttons.
  */
 
+/**
+ * Implements hook_form_alter().
+ */
+function easyddb_search_radios_form_alter(&$form, &$form_state, $form_id) {
+  if ('search_block_form' !== $form_id) {
+    return;
+  }
 
+  $options = array();
+
+  $backends = search_get_info();
+  $default = search_get_default_module_info();
+
+  foreach ($backends as $backend_name => $backend_config) {
+    $path = 'search/' . $backend_config['path'];
+    $title = t('Search in @backend_title', array('@backend_title' => strtolower($backend_config['title'])));
+
+    $options[$path] = $title;
+  }
+
+  $results_page = '';
+  if ('search' === arg(0)) {
+    $results_page = '-result';
+  }
+
+  $form['search_radios']['searches'] = array(
+    '#type' => 'radios',
+    '#required' => FALSE,
+    '#options' => $options,
+    '#default_value' => 'search/' . $default['path'],
+    '#prefix' => '<div id="search-radios' . $results_page . '">',
+    '#suffix' => '</div>',
+  );
+
+  $form['#attached']['css'] = array(
+    drupal_get_path('module', 'easyddb_search_radios') . '/css/search_radios.css',
+  );
+
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'easyddb_search_radios') . '/js/search_radios.js',
+  );
+
+}
