@@ -45,5 +45,4 @@ function easyddb_search_radios_form_alter(&$form, &$form_state, $form_id) {
   $form['#attached']['js'] = array(
     drupal_get_path('module', 'easyddb_search_radios') . '/js/search_radios.js',
   );
-
 }
