@@ -1,0 +1,5 @@
+name = "easyDDB search radios"
+description = "Adds radio buttons on search form with which user can choose where to search."
+package = "easyDDB"
+core = "7.x"
+version = 7.x-0.1+easy
