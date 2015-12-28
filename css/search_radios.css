@@ -4,20 +4,22 @@
     left: 750px;
     top: 26px;
   }
-
-  #search-radios label {
-    color: #000000;
+  #search-radios a {
+    font-weight: normal;
   }
-
+  #edit-searches input.form-radio {
+    float: left;
+    margin-top: 4px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+  }
   #search-radios-result {
     position: absolute;
     left: 560px;
     top: -4px;
   }
 
-  #search-radios-result label {
-    color: #000000;
-  }
 }
 
 @media all and (max-width: 480px) {
@@ -27,19 +29,12 @@
     margin: 0 4px 0 0;
   }
 
-  #search-radios label {
-    color: #000000;
-  }
-
   #search-radios-result .form-item{
     width: auto;
     float: left;
     margin: 0 4px 0 0;
   }
 
-  #search-radios-result label {
-    color: #000000;
-  }
 }
 
 @media all and (max-width: 768px) {
@@ -49,17 +44,9 @@
     margin: 0 4px 0 0;
   }
 
-  #search-radios label {
-    color: #000000;
-  }
-
   #search-radios-result .form-item{
     width: auto;
     float: left;
     margin: 0 4px 0 0;
-  }
-
-  #search-radios-result label {
-    color: #000000;
   }
 }
