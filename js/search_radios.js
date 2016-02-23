@@ -5,6 +5,17 @@
 
 (function ($) {
   $(document).ready(function() {
+    $('#edit-searches').find('a').on('click', function() {
+      $(this).parents('.form-item-searches').find('input[name="searches"]').prop("checked", true);
+      return false;
+    });
+    var path = window.location.pathname;
+    var arg = path.split('/')[2];
+    // Unset advanced form.
+    if (arg === 'search') {
+      $('#search-block-form #edit-advanced').remove();
+    }
+
     $('#search-block-form').submit(function(event) {
       var $advanced_search = $('fieldset#edit-advanced');
       var $search_radios = $('div[id^="search-radios"]').find('input');

@@ -1,6 +1,5 @@
-#search-radios label,
-#search-radios-result label {
-  color: #000;
+#search-radios a,
+#search-radios-result a {
   position: relative;
   top: 1px;
 }
