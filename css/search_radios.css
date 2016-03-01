@@ -1,65 +1,52 @@
+#search-radios a,
+#search-radios-result a {
+  position: relative;
+  top: 1px;
+}
+
+#search-radios input[type='radio'],
+#search-radios-result input[type='radio'] {
+  height: 16px;
+  width: 16px;
+}
+
+.page-search #search-radios-result {
+  display: none;
+}
+
 @media all and (min-width: 960px) {
   #search-radios {
-    position: absolute;
     left: 750px;
+    position: absolute;
     top: 26px;
   }
 
-  #search-radios label {
-    color: #000000;
-  }
-
   #search-radios-result {
-    position: absolute;
     left: 560px;
+    position: absolute;
     top: -4px;
-  }
-
-  #search-radios-result label {
-    color: #000000;
   }
 }
 
 @media all and (max-width: 480px) {
-  #search-radios .form-item{
-    width: auto;
+  #search-radios .form-item,
+  #search-radios-result .form-item {
     float: left;
     margin: 0 4px 0 0;
-  }
-
-  #search-radios label {
-    color: #000000;
-  }
-
-  #search-radios-result .form-item{
     width: auto;
-    float: left;
-    margin: 0 4px 0 0;
-  }
-
-  #search-radios-result label {
-    color: #000000;
   }
 }
 
 @media all and (max-width: 768px) {
-  #search-radios .form-item{
-    width: auto;
+  #search-radios {
+    margin-top: 15px;
+    overflow: hidden;
+  }
+
+  #search-radios .form-item,
+  #search-radios-result .form-item {
     float: left;
-    margin: 0 4px 0 0;
-  }
-
-  #search-radios label {
-    color: #000000;
-  }
-
-  #search-radios-result .form-item{
+    margin: 0 12px 0 0;
     width: auto;
-    float: left;
-    margin: 0 4px 0 0;
-  }
-
-  #search-radios-result label {
-    color: #000000;
   }
 }
