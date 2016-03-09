@@ -20,8 +20,8 @@ function easyddb_search_radios_form_alter(&$form, &$form_state, $form_id) {
 
     foreach ($backends as $backend_name => $backend_config) {
       $path = 'search/' . $backend_config['path'];
-      $title = t('Search @backend', array('@backend' => $backend_config['title']));
-      $title = l($title, $path);
+      $title = format_string('Search @backend', array('@backend' => $backend_config['title']));
+      $title = l(t($title), $path);
       $options[$path] = $title;
     }
 
