@@ -38,11 +38,12 @@ function easyddb_search_radios_form_alter(&$form, &$form_state, $form_id) {
       '#prefix' => '<div id="search-radios' . $results_page . '">',
       '#suffix' => '</div>',
     );
+
+    $path = drupal_get_path('module', 'easyddb_search_radios');
+    $form['#attached']['css'] = array(
+      $path  . '/css/search_radios.css',
+    );
+    drupal_add_js($path . '/js/search_radios.js');
   }
 
-  $path = drupal_get_path('module', 'easyddb_search_radios');
-  $form['#attached']['css'] = array(
-    $path  . '/css/search_radios.css',
-  );
-  drupal_add_js($path . '/js/search_radios.js');
 }
