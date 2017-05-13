@@ -26,6 +26,11 @@
           window.location.assign(current_url + '/search/' + search_radio + '/' + query_string);
         }
       });
+
+      if ($('.ding-user-header-block')[0]) {
+        $("div#search-radios").addClass("search-radios-inline");
+        $("#search-block-form .form-actions.form-wrapper").insertBefore($(".search-radios-inline"));
+      }
     }
   };
 })(jQuery);
