@@ -21,12 +21,11 @@
     top: 26px;
   }
 
-  .search-radios-inline {
-    left: 0 !important;
-    top: 0;
+  #search-block-form .search-radios-inline {
+    left: 0;
     bottom: 0;
     height: 25px;
-    margin-top: 80px;
+    margin-top: 75px;
   }
 
   #search-radios-result {
