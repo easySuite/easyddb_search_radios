@@ -21,6 +21,13 @@
     top: 26px;
   }
 
+  #search-block-form .search-radios-inline {
+    left: 0;
+    bottom: 0;
+    height: 25px;
+    margin-top: 75px;
+  }
+
   #search-radios-result {
     left: 560px;
     position: absolute;
@@ -49,4 +56,19 @@
     margin: 0 12px 0 0;
     width: auto;
   }
+}
+
+.search-radios-inline .form-radios .form-item  {
+  display: inline;
+  bottom: 0;
+  left: 0;
+  padding-right: 15px;
+}
+
+.search-radios-inline .form-radios .form-item label {
+  display: inline;
+}
+
+.search-radios-inline .form-radios .form-item label a{
+  color: white;
 }
