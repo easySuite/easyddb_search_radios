@@ -27,9 +27,12 @@
         }
       });
 
-      if ($('.ding-user-header-block')[0]) {
+      if ($('.ding-user-header-block').length) {
         $("div#search-radios").addClass("search-radios-inline");
         $("#search-block-form .form-actions.form-wrapper").insertBefore($(".search-radios-inline"));
+      }
+      else {
+        $("div#search-radios").addClass("search-radios-basic");
       }
     }
   };
