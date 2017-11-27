@@ -1,4 +1,4 @@
-easyDDB search radios
+easyOPAC search radios
 ==========
 
 Module adds radio buttons on search form with which user can choose where to search.
