@@ -7,7 +7,7 @@
   'use strict';
 
   Drupal.behaviors.easyddb_search_radios = {
-    attach: function () {
+    attach: function (context, settings) {
       $('#edit-searches').find('a').on('click', function() {
         $(this).parents('.form-item-searches').find('input[name="searches"]').prop("checked", true);
 
@@ -27,12 +27,11 @@
         }
       });
 
-      if ($('.ding-user-header-block').length) {
-        $("div#search-radios").addClass("search-radios-inline");
-        $("#search-block-form .form-actions.form-wrapper").insertBefore($(".search-radios-inline"));
-      }
-      else {
-        $("div#search-radios").addClass("search-radios-basic");
+      $("div#search-radios").addClass("search-radios-basic");
+
+      var extended_search = settings.ting_extended_search;
+      if (extended_search !== undefined && extended_search.ting_extended_search_concurent_trigger !== false) {
+        $("div#search-radios").addClass("search-radios-concurent");
       }
     }
   };

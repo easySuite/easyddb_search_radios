@@ -10,6 +10,42 @@
   width: 16px;
 }
 
+#search-radios input[type=radio]+label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px 5px 0;
+  background-color: #e5e5e5;
+}
+
+#search-radios input[type=radio]+label::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: #fff;
+}
+
+#search-radios input[type=radio]+label {
+  display: block;
+  padding: 0 0 1px 26px;
+  position: relative;
+}
+
+#search-radios .form-item {
+  margin: 3px 0 6px 0;
+}
+
+#search-radios input[type=radio]:checked+label::after {
+  background-color: #4d898e;
+}
+
 .page-search #search-radios-result {
   display: none;
 }
@@ -45,9 +81,15 @@
   }
 
    #search-radios.search-radios-basic {
-    left: 750px;
+    left: 710px;
     position: absolute;
-    top: 26px;
+    top: 0;
+  }
+
+  #search-radios.search-radios-concurent {
+    left: 610px;
+    position: absolute;
+    top: 0;
   }
 
   #search-radios-result {
