@@ -81,19 +81,19 @@
   }
 
    #search-radios.search-radios-basic {
-    left: 710px;
+    right: 160px;
     position: absolute;
     top: 0;
   }
 
   #search-radios.search-radios-concurent {
-    left: 610px;
+    right: 275px;
     position: absolute;
     top: 0;
   }
 
   #search-radios-result {
-    left: 560px;
+    right: 160px;
     position: absolute;
     top: -4px;
   }
