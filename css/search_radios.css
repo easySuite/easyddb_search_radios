@@ -112,6 +112,7 @@
   #search-radios {
     margin-top: 15px;
     overflow: hidden;
+    height: 115px;
   }
 
   #search-radios .form-item,
