@@ -1,4 +1,4 @@
-name = "easyDDB search radios"
+name = "easyOPAC search radios"
 description = "Adds radio buttons on search form with which user can choose where to search."
 package = "easyOPAC"
 core = "7.x"
