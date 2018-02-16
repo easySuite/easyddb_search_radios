@@ -46,10 +46,6 @@
   background-color: #4d898e;
 }
 
-.page-search #search-radios-result {
-  display: none;
-}
-
 .search-radios-inline .form-radios .form-item  {
   bottom: 0;
   left: 0;
