@@ -38,7 +38,7 @@ function easyddb_search_radios_form_search_block_form_alter(&$form, &$form_state
   $path = drupal_get_path('module', 'easyddb_search_radios');
   $form['#attached'] = array(
     'css' => array(
-      $path  . '/css/search_radios.css',
+      $path . '/css/search_radios.css',
     ),
     'js' => array(
       $path . '/js/search_radios.js'
