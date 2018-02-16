@@ -8,42 +8,40 @@
  * Implements hook_form_FORM_ID_alter().
  */
 function easyddb_search_radios_form_search_block_form_alter(&$form, &$form_state) {
-  if (arg(0) != 'search') {
-    $options = array();
+  $options = array();
 
-    $backends = search_get_info();
-    $default = search_get_default_module_info();
+  $backends = search_get_info();
+  $default = search_get_default_module_info();
 
-    foreach ($backends as $backend_name => $backend_config) {
-      $title = format_string('Search @backend', array('@backend' => $backend_config['title']));
-      $title = l(t($title), 'search/' . $backend_config['path']);
-      $options[$backend_config['path']] = $title;
-    }
-
-    $results_page = '';
-    if ('search' === arg(0)) {
-      $results_page = '-result';
-    }
-
-    $form['search_radios']['searches'] = array(
-      '#type' => 'radios',
-      '#required' => FALSE,
-      '#options' => $options,
-      '#default_value' => $default['path'],
-      '#prefix' => '<div id="search-radios' . $results_page . '">',
-      '#suffix' => '</div>',
-    );
-
-    $form['#submit'] = array('easyddb_search_radios_search_submit');
-
-    $path = drupal_get_path('module', 'easyddb_search_radios');
-    $form['#attached'] = array(
-      'css' => array(
-        $path  . '/css/search_radios.css',
-      ),
-      'js' => array(
-        $path . '/js/search_radios.js'
-      ),
-    );
+  foreach ($backends as $backend_name => $backend_config) {
+    $title = format_string('Search @backend', array('@backend' => $backend_config['title']));
+    $title = l(t($title), 'search/' . $backend_config['path']);
+    $options[$backend_config['path']] = $title;
   }
+
+  $results_page = '';
+  if (arg(0) == 'search') {
+    $results_page = '-result';
+  }
+
+  $form['search_radios']['searches'] = array(
+    '#type' => 'radios',
+    '#required' => FALSE,
+    '#options' => $options,
+    '#default_value' => $default['path'],
+    '#prefix' => '<div id="search-radios' . $results_page . '">',
+    '#suffix' => '</div>',
+  );
+
+  $form['#submit'] = array('easyddb_search_radios_search_submit');
+
+  $path = drupal_get_path('module', 'easyddb_search_radios');
+  $form['#attached'] = array(
+    'css' => array(
+      $path . '/css/search_radios.css',
+    ),
+    'js' => array(
+      $path . '/js/search_radios.js'
+    ),
+  );
 }
