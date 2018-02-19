@@ -10,8 +10,7 @@
   width: 16px;
 }
 
-#search-radios input[type=radio]+label::before,
-#search-radios-result input[type=radio]+label::before {
+#search-radios input[type=radio]+label::before {
   content: '';
   position: absolute;
   left: 0;
