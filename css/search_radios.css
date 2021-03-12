@@ -6,8 +6,7 @@
 
 #search-radios input[type='radio'],
 #search-radios-result input[type='radio'] {
-  height: 16px;
-  width: 16px;
+  display: none;
 }
 
 #search-radios input[type=radio]+label::before {
@@ -19,6 +18,7 @@
   height: 18px;
   margin: 0 10px 5px 0;
   background-color: #e5e5e5;
+  border-radius: 50%;
 }
 
 #search-radios input[type=radio]+label::after {
@@ -33,7 +33,6 @@
 }
 
 #search-radios input[type=radio]+label {
-  display: block;
   padding: 0 0 1px 26px;
   position: relative;
 }
