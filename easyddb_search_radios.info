@@ -2,4 +2,4 @@ name = "easyOPAC search radios"
 description = "Adds radio buttons on search form with which user can choose where to search."
 package = "easyOPAC"
 core = "7.x"
-version = 7.x-4.0.2
+version = 7.x-6.2.1
