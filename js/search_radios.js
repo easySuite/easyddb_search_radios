@@ -30,7 +30,7 @@
       $("div#search-radios").addClass("search-radios-basic");
 
       var extended_search = settings.ting_extended_search;
-      if (extended_search !== undefined && extended_search.ting_extended_search_concurent_trigger !== false) {
+      if (extended_search !== undefined) {
         $("div#search-radios").addClass("search-radios-concurent");
       }
     }
